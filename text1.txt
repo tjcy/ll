@@ -1,0 +1,18 @@
+sudo mysql -u root -p
+create database shop_mysql charset=utf8;
+use shop_mysql;
+select database();
+create table list(
+  id int auto_increment primary key,
+  likes varchar(20),
+  discount varchar(30),
+  double_eleven_wishes varchar(30));
+desc list;
+insert into list(id,likes,discount,wishes) values(1,"weiyi","80%","hongbao");
+insert into list(id,likes,discount,wishes) values(1,"weiyi","80%","hongbao"),(2,"pants","90%","youhuijuan"),(3,"shoes","89%","manjian");
+update list set wishes="iphonex" where wishes="hongbao";
+select * from list;
+delete from list where likes="shoes";
+select * from list;
+
+
